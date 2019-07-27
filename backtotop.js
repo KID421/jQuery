@@ -10,6 +10,19 @@ $(document).ready(function () {
 
     });
 
+    // 函式會有小括號
+
+    $("#a1").click(function (e) { 
+
+        var top = $("#section1").position().top;
+        $("html, body").animate({scrollTop: top}, 500);
+    });
+
+    $("#a2").click(function (e) { 
+
+        var top = $("#section2").position().top;
+        $("html, body").animate({scrollTop: top}, 500);
+    });
     
     // alert($(window).scrollTop());
     
@@ -25,7 +38,7 @@ $(document).ready(function () {
         } else {                            // 否則
 
             $("#btnTop").fadeOut(500);      // 隱藏按鈕
-            
+
         }
     });
 });
