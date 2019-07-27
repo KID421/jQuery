@@ -12,21 +12,38 @@ $(document).ready(function () {
 
     // 函式會有小括號
 
-    $("#a1").click(function (e) { 
+    // $("#a1").click(function (e) { 
+    //     var top = $("#section1").position().top;
+    //     $("html, body").animate({scrollTop: top}, 500);
+    // });
 
-        var top = $("#section1").position().top;
-        $("html, body").animate({scrollTop: top}, 500);
-    });
 
-    $("#a2").click(function (e) { 
 
-        var top = $("#section2").position().top;
-        $("html, body").animate({scrollTop: top}, 500);
-    });
+    // API 
+    // 自訂函式 (參數) { 內容 }
+    // btn - 要點選的按鈕選取器名稱
+    // pos - 要前往的區塊選取器名稱
+    // dur - 前往的時間
+    function scrollToPosition (btn, pos, dur) {
+
+        $(btn).click(function (e) { 
+            var top = $(pos).position().top;
+            $("html, body").animate({scrollTop: top}, dur);
+        });
+
+    }
+
+    // 使用 API
+    scrollToPosition("#a1", "#section1", 500);
+    scrollToPosition("#a2", "#section2", 1000);
+    scrollToPosition("#a3", "#section3", 1000);
+    scrollToPosition("#a4", "#section4", 1000);
+    scrollToPosition("#a5", "#section5", 1000);
+
     
     // alert($(window).scrollTop());
     
-    $("#btnTop").fadeOut(0);                // 按鈕隱藏 - 也可設定在 CSS 內
+    // $("#btnTop").fadeOut(0);                // 按鈕隱藏 - 也可設定在 CSS 內
 
     // 元素 捲動 (匿名函式() {  });
     $(window).scroll(function() {
