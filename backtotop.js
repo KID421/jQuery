@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         $(btn).click(function (e) { 
             var top = $(pos).position().top;
-            $("html, body").animate({scrollTop: top}, dur);
+            $("html, body").stop().animate({scrollTop: top}, dur);
         });
 
     }
