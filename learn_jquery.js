@@ -8,6 +8,9 @@ $(document).ready(function () {
     
     alert("網頁文件準備完成了~");
 
+    $("h1").hide();         // 選取 h1 並隱藏
+    $("h2").hide();         // 選取 h2 並隱藏
+
 });
 
 // 函式、方法
