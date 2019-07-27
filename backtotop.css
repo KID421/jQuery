@@ -33,4 +33,8 @@ section:nth-child(5) {
     position: fixed;
     right: 30px;
     bottom: 30px;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
 }

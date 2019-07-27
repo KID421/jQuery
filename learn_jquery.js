@@ -24,7 +24,6 @@ $(document).ready(function () {
         
         $(this).animate({width: "100px", height: "100px"}, 2000);
     });
-
 });
 
 // 函式、方法
